@@ -1,0 +1,3 @@
+        <%= image_tag @micropost.picture.url, :size => '400x400' %>
+              <%= @micropost.content if !@micropost.content.nil? %>
+        <div class="post-time"><%= time_ago_in_words(@micropost.created_at).upcase %>ago</div>
