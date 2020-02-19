@@ -84,4 +84,18 @@ class User < ApplicationRecord
     user.oauth_expires_at = Time.at(auth.credentials.expires_at)
     user
   end
+  
+  def follow(other_user)
+    active_relationships.create(followed_id: other_user.id)
+    if other_user.follow_notification
+      Relationship.send_follow_email(other_user, self)
+    end
+  end
+
+  def unfollow(other_user)
+    active_relationships.find_by(followed_id: other_user.id).destroy
+    if other_user.follow_notification
+      Relationship.send_unfollow_email(other_user, self)
+    end
+  end
 end
