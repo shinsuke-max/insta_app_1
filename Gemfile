@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails',                   '5.1.6'
 gem 'bcrypt',                  '3.1.12'
-gem 'rename'
+gem 'ransack'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker',                   '1.7.3'
