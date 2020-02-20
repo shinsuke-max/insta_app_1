@@ -1,24 +1,8 @@
-# README
+自分が苦労した点
+  rails tutorialでの学びを生かして自分で考えて実装しようとするとどうしてもエラーが頻発する
+  結局rails tutorialをなぞった程度のアプリなので応用が効くように理解を深めたい
+  フロント側のコーディングを自分なりにアレンジしようと思ったが結局チュートリアルを真似ただけになってしまった
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+学んだ点
+  rails tutorialの内容
+  git
