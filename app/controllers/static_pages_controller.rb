@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
         @q = Micropost.none.ransack
         @feed_items = current_user.feed.paginate(page: params[:page])
       end
+      @likes = Like.where(micropost_id: params[:micropost_id])
       @url = root_path
     end
   end

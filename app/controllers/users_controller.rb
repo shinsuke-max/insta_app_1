@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       @q = Micropost.none.ransack
       @microposts = @user.microposts.paginate(page: params[:page])
     end
+    @likes = Like.where(micropost_id: params[:micropost_id])
     @url = user_path(@user)
   end
   
