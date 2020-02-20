@@ -14,7 +14,9 @@ class MicropostsController < ApplicationController
   end
   
   def show
-    @micropost = Micropost.find_by(id: params[:id])
+    @micropost = Micropost.find(params[:id])
+    @comment = Comment.new
+    @user = User.find_by(id: @micropost.user_id)
   end
   
   def destroy
